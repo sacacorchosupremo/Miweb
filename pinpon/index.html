@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ping Pong</title>
+    <!-- Add the Bootstrap CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <link rel="icon" href="https://i.ibb.co/M6KTWnf/pic.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ignacio Peña Moya</h1>
+    <div class="container">
+      <canvas id="canvas" width="600" height="400"></canvas>
+    </div>
+    <div class="button">
+      <button id="start-btn" class="btn">Empezar</button>
+      <button id="pause-btn" class="btn">Pausar</button>
+      <button id="restart-btn" class="btn">Reiniciar</button>
+    </div>
+    <p class="control">Controles: Jugador Izquierdo(W & S) | Jugador Derecho(↑ & ↓)</p>
+    <div class="modal" tabindex="-1" role="dialog" id="message-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h5 id="message"></h5>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="message-modal-close"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
