@@ -1,0 +1,121 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo con video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Capa de superposición para oscurecer el video */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Oscuridad ajustable */
+    z-index: -1;
+}
+
+/* Nombre en el centro */
+.center-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    animation: blink 1s infinite, changeColor 3s infinite;
+    z-index: 2;
+}
+/* Nombre insertcoin */
+.incoin-name {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    animation: changeColor 3s infinite;
+    z-index: 2;
+}
+
+/* Parpadeo */
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+/* Cambio de color */
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+/* Botones flotantes */
+.floating-buttons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo de los botones */
+.game-link {
+    position: absolute;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ff00ff, #ffcc00);
+    color: black;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    padding: 15px 30px;
+    border: 4px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game-link:hover {
+    background: linear-gradient(90deg, #ffcc00, #ff00ff);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
+}
